@@ -4,6 +4,7 @@ console.log(api)
 
 class ShopStore {
     shop = [];
+    isLoading = true;
 
     constructor(){
         makeAutoObservable(this);
@@ -13,6 +14,7 @@ class ShopStore {
         try {
             const res = await api.get("/shops");
             this.shop = res.data;
+            this.isLoading = false;
         } catch (error) {
             console.log(error)
         }

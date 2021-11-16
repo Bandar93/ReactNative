@@ -8,9 +8,9 @@ export default function App() {
   return (
     <NativeBaseProvider>
     <View style={styles.container}>
-      <Home />
+      {/* <Home /> */}
       {/* <ShopList/> */}
-      {/* <ShopDetail /> */}
+      <ShopDetail />
     </View>
     </NativeBaseProvider>
   );
