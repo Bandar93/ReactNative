@@ -1,13 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+import { NativeBaseProvider } from 'native-base';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Home from './components/Home'
+import ShopList from './components/ShopList';
+import ShopDetail from './components/ShopDetail'
 export default function App() {
   return (
+    <NativeBaseProvider>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Home />
+      {/* <ShopList/> */}
+      {/* <ShopDetail /> */}
     </View>
+    </NativeBaseProvider>
   );
 }
 
