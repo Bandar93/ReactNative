@@ -1,18 +1,19 @@
 import { NativeBaseProvider } from 'native-base';
+import { NavigationContainer } from "@react-navigation/native";
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './components/Home'
-import ShopList from './components/ShopList';
-import ShopDetail from './components/ShopDetail'
+import { StyleSheet, View } from 'react-native';
+import Navigation from './components/Navigation';
 export default function App() {
+
+
   return (
+    <NavigationContainer>
     <NativeBaseProvider>
-    <View style={styles.container}>
-      {/* <Home /> */}
-      {/* <ShopList/> */}
-      <ShopDetail />
-    </View>
+    
+      <Navigation/>
+    
     </NativeBaseProvider>
+    </NavigationContainer>
   );
 }
 

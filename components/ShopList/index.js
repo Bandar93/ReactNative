@@ -4,12 +4,13 @@ import { StyleSheet, Text, View } from 'react-native'
 import shopStore from '../../stores/shopStore'
 import ShopItem from './ShopItem'
 
-const ShopList = () => {
+const ShopList = ({navigation}) => {
     const shopList = shopStore.shop.map((shop) => (
-        <ShopItem shop={shop} key={shop._id}/>
+        <ShopItem shop={shop} navigation={navigation} key={shop._id}
+        styles="container"/>
         
     ));
-    console.log(shopStore.shop)
+    
 
     return (
         <View>
@@ -20,4 +21,11 @@ const ShopList = () => {
 
 export default observer (ShopList);
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+})

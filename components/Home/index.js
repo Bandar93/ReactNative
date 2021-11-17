@@ -1,12 +1,12 @@
 import { Text,Button } from 'native-base';
 import React from 'react'
-import { StyleSheet,  View } from 'react-native'
+import {   View } from 'react-native'
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View>
            <Text>Home Page</Text>
-           <Button>Shop List</Button>
+           <Button onPress={() => navigation.navigate("ShopList")}>ShopList</Button>
 
         </View>
     );
@@ -14,4 +14,4 @@ const Home = () => {
 
 export default Home
 
-const styles = StyleSheet.create({})
+

@@ -3,10 +3,10 @@ import React from 'react'
 import { StyleSheet, Text, View , Image} from 'react-native'
 import { baseURL } from '../../stores/api'
 
-const ShopItem = ({shop}) => {
+const ShopItem = ({shop,navigation}) => {
     return (
         <View>
-            <Text> {shop.name} </Text>
+            <Text onPress={() => navigation.navigate("ShopDetail") } > {shop.name} </Text>
             <Image
             source = {{uri: baseURL + shop.image}}
             style={{width:50, height:50}}

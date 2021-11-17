@@ -1,12 +1,12 @@
 import { observer } from 'mobx-react';
-import { Spinner } from 'native-base';
+import { Button, Spinner } from 'native-base';
 import React from 'react'
 import {  Image , View , Text} from 'react-native'
 import { baseURL } from '../../stores/api';
 import shopStore from '../../stores/shopStore'
 import ProductList from '../ProductList';
 
-const ShopDetail = () => {
+const ShopDetail = ({navigation}) => {
     if(shopStore.isLoading) return <Spinner />
     const shop = shopStore.shop[0];
     return (
@@ -15,6 +15,7 @@ const ShopDetail = () => {
             <Image source={{uri: baseURL + shop.image}}
             style={{width:50, height:50}} />
             <ProductList products={shop.products}/>
+            <Button onPress={() => navigation.navigate("Home")}>Home</Button>
             
         </View>
     )
