@@ -8,7 +8,7 @@ import ProductList from '../ProductList';
 
 const ShopDetail = ({navigation, route}) => {
     if(shopStore.isLoading) return <Spinner />
-    const shop = route.params.shop
+    const shop = route.params.shop;
     return (
         <View>
             <Text> {shop.name} </Text>
