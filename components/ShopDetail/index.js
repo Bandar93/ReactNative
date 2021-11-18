@@ -6,9 +6,9 @@ import { baseURL } from '../../stores/api';
 import shopStore from '../../stores/shopStore'
 import ProductList from '../ProductList';
 
-const ShopDetail = ({navigation}) => {
+const ShopDetail = ({navigation, route}) => {
     if(shopStore.isLoading) return <Spinner />
-    const shop = shopStore.shop[0];
+    const shop = route.params.shop
     return (
         <View>
             <Text> {shop.name} </Text>

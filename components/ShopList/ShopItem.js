@@ -6,7 +6,7 @@ import { baseURL } from '../../stores/api'
 const ShopItem = ({shop,navigation}) => {
     return (
         <View>
-            <Text onPress={() => navigation.navigate("ShopDetail") } > {shop.name} </Text>
+            <Text onPress={() => navigation.navigate("ShopDetail",{shop: shop }) } > {shop.name} </Text>
             <Image
             source = {{uri: baseURL + shop.image}}
             style={{width:50, height:50}}
